@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Jejak Karbon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <h1>Kalkulator Jejak Karbon</h1>
+            
+            <div class="add-device">
+                <select id="device-type">
+                    <option value="">Pilih Jenis Alat</option>
+                    <option value="mobil">Mobil</option>
+                    <option value="laptop">Laptop</option>
+                    <option value="tv">TV</option>
+                    <option value="lampu">Lampu</option>
+                    <option value="kipas">Kipas Angin</option>
+                    <option value="ac">AC</option>
+                    <option value="kulkas">Kulkas</option>
+                </select>
+                <button id="add-device">Tambah Alat</button>
+            </div>
+
+            <div id="device-list" class="device-list">
+                <!-- Perangkat akan ditambahkan di sini -->
+            </div>
+
+            <div class="result">
+                <h2>Total Emisi Karbon:</h2>
+                <div id="emissions-breakdown" class="emissions-breakdown">
+                    <!-- Rincian emisi akan ditampilkan di sini -->
+                </div>
+                <p id="total" class="total-emissions">0 kg CO2/bulan</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

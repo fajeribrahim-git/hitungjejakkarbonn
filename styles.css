@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/domenico-loia-hGV2TfOh0ns-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.calculator {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+}
+
+h1 {
+    color: #2e597d;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.75rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.add-device {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: rgba(248, 249, 250, 0.9);
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+}
+
+select, button {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+select {
+    flex: 1;
+}
+
+button {
+    background: #2e527d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background: #1b3f5e;
+    transform: translateY(-1px);
+}
+
+.device-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.device-item {
+    background: rgba(248, 249, 250, 0.9);
+    padding: 1.5rem;
+    border-radius: 8px;
+    position: relative;
+    backdrop-filter: blur(4px);
+    transition: transform 0.2s;
+}
+
+.device-item:hover {
+    transform: translateY(-2px);
+}
+
+.device-item h3 {
+    color: #2e4e7d;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #2e577d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remove-device {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.remove-device:hover {
+    background: #c82333;
+}
+
+.device-inputs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.input-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+input:focus {
+    outline: none;
+    border-color: #2e587d;
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+    background: white;
+}
+
+.result {
+    background: rgba(215, 237, 250, 0.95);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 1.5rem;
+    backdrop-filter: blur(4px);
+}
+
+.result h2 {
+    color: #2e587d;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.emissions-breakdown {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 6px;
+    backdrop-filter: blur(4px);
+}
+
+.emissions-breakdown p {
+    margin: 0.5rem 0;
+    color: #555;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border-bottom: 1px solid rgba(238, 238, 238, 0.5);
+}
+
+.emissions-breakdown p:last-child {
+    border-bottom: none;
+}
+
+.total-emissions {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1b405e;
+    margin-top: 1rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .calculator {
+        padding: 1rem;
+    }
+    
+    .add-device {
+        flex-direction: column;
+    }
+    
+    .device-inputs {
+        grid-template-columns: 1fr;
+    }
+}
